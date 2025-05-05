@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,8 +18,9 @@ function App() {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-        <div className="App">
+        <div className="App h-screen overflow-y-scroll snap-y snap-mandatory">
           <Navbar />
+          <Home />
         </div>
       )}
     </>
