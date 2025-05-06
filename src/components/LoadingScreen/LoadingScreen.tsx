@@ -6,7 +6,7 @@ const LoadingScreen = () => {
     if (loader) {
       loader.classList.add("shutter");
     }
-  }, 1500);
+  }, 1000);
   return (
     <div className="loader fixed inset-0 bg-white flex items-center justify-center z-50">
       <img
