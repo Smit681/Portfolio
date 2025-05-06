@@ -20,7 +20,7 @@ function Projects() {
   return (
     <div
       id="project"
-      className="md:snap-start md:h-[100vh] p-5 md:p-10 lg:p-15 flex flex-col-reverse md:flex-row items-center md:items-start justify-between bg-black text-white"
+      className="sm:snap-start md:h-[100vh] p-5 md:p-10 lg:p-15 flex flex-col-reverse md:flex-row items-center md:items-start justify-between bg-black text-white"
     >
       <div className="w-full md:w-[40%] mt-20 mb-auto flex items-center justify-center flex-col">
         <h1 className="hidden md:flex text-center text-5xl font-bold mb-10">
@@ -62,28 +62,28 @@ function Projects() {
           />
 
           <h2
-            className={`absolute top-[15%] left-0 text-xl font-semibold z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg max-w-50 text-center transition-all transform duration-1000 ${
+            className={`absolute top-[10%] md:top-[15%] md:left-0 -left-[8%] text-xs md:text-xl font-semibold z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg max-w-30 md:max-w-50 text-center transition-all transform duration-1000 ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
             {data[counter].stats[0].value}
           </h2>
           <h2
-            className={`absolute top-[15%] right-0 text-xs font-semibold w-50 z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg text-center transition-all transform duration-1000 ${
+            className={`absolute md:top-[15%] -top-[10%] md:right-0 -right-[5%] text-xs font-semibold w-35 md:w-50 z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg text-center transition-all transform duration-1000 ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
             {data[counter].quote}
           </h2>
           <p
-            className={`absolute bottom-[20%] left-0 text-md z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg max-w-50 text-center transition-all transform duration-1000 ${
+            className={`absolute bottom-[20%] -left-[8%] md:left-0 text-xs md:text-xl z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg max-w-30 md:max-w-50 text-center transition-all transform duration-1000 ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
             {data[counter].stats[1].value}
           </p>
           <p
-            className={`absolute bottom-[20%] right-0 text-md max-w-50 z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg text-center transition-all transform duration-1000 ${
+            className={`absolute md:bottom-[20%] bottom-[15%] right-0 text-xs md:text-xl max-w-30 md:max-w-50 z-25 bg-[#23274a]/80 backdrop-blur-md text-white px-2 py-1 rounded-lg text-center transition-all transform duration-1000 ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
@@ -92,7 +92,7 @@ function Projects() {
 
           {/* Title */}
           <h1
-            className={`absolute bottom-[-5%] text-5xl font-bold z-25 w-full text-center bg-black/20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] px-2 py-1 rounded transition-all transform duration-1000 ${
+            className={`absolute bottom-[-15%] md:bottom-[-5%] text-3xl md:text-5xl font-bold z-25 w-full text-center bg-black/20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] px-2 py-1 rounded transition-all transform duration-1000 ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
@@ -101,7 +101,7 @@ function Projects() {
 
           {/* Next Project Button */}
           <button
-            className=" hover:cursor-pointer hover:bg-white hover:scale-105 absolute right-[-8%] top-[40%] bg-white/95 text-black rounded-full w-[80px] h-[80px] flex flex-col items-center justify-center font-bold text-sm text-center leading-tight shadow-lg z-25 "
+            className=" hover:cursor-pointer hover:bg-white hover:scale-105 absolute right-[-8%] top-[40%] bg-white/95 text-black rounded-full md:w-[80px] md:h-[80px] w-[60px] h-[60px] flex flex-col items-center justify-center font-bold text-xs md:text-sm text-center leading-tight shadow-lg z-25 "
             onClick={nextProject}
           >
             NEXT PROJECT

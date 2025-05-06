@@ -4,9 +4,11 @@ function Navbar() {
   return (
     <header className="navbar flex items-center bg-white shadow z-30 h-20 p-5 fixed top-0 left-0 w-full">
       <a href="/" className="flex items-center">
-        <img src="/assets/logo.jpg" alt="logo" className="w-18 mr-3" />
+        <img src="/assets/logo.jpg" alt="logo" className="w-16 sm:w-18 mr-3" />
         <div>
-          <h1 className="text-3xl font-semibold tracking-wider"> SMIT SHAH</h1>
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-wider">
+            SMIT SHAH
+          </h1>
           <p className="text-gray-600 text-center tracking-wider">
             WEB DEVELOPER
           </p>
