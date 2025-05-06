@@ -2,7 +2,7 @@ import "./navbar.css";
 
 function Navbar() {
   return (
-    <header className="navbar flex items-center bg-white shadow z-10 h-20 p-5 fixed top-0 left-0 w-full">
+    <header className="navbar flex items-center bg-white shadow z-30 h-20 p-5 fixed top-0 left-0 w-full">
       <a href="/" className="flex items-center">
         <img src="/assets/logo.jpg" alt="logo" className="w-18 mr-3" />
         <div>
