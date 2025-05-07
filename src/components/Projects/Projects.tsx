@@ -19,8 +19,8 @@ function Projects() {
 
   return (
     <div
-      id="project"
-      className="sm:snap-start md:h-[100vh] p-5 md:p-10 lg:p-15 flex flex-col-reverse md:flex-row items-center md:items-start justify-between bg-black text-white"
+      id="projects"
+      className="sm:snap-start p-5 md:p-10 lg:p-15 flex flex-col-reverse md:flex-row items-center md:items-start justify-between bg-black text-white"
     >
       <div className="w-full md:w-[40%] mt-20 mb-auto flex items-center justify-center flex-col">
         <h1 className="hidden md:flex text-center text-5xl font-bold mb-10">
@@ -92,7 +92,7 @@ function Projects() {
 
           {/* Title */}
           <h1
-            className={`absolute bottom-[-15%] md:bottom-[-5%] text-3xl md:text-5xl font-bold z-25 w-full text-center bg-black/20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] px-2 py-1 rounded transition-all transform duration-1000 ${
+            className={`absolute bottom-[-15%] md:bottom-[-5%] text-3xl md:text-5xl font-bold z-25 w-full text-center bg-black/20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] px-2 py-1 rounded transition-all transform duration-1000 newYorkFont ${
               animate ? "opacity-0 scale-50" : "opacity-100 scale-150;"
             }`}
           >
@@ -117,7 +117,20 @@ function Projects() {
 
 const data = [
   {
-    image: "./assets/foodhub.jpg",
+    image: "/assets/LMS.png",
+    name: "Brainstormr LMS",
+    desc: "Created using Next.js in the backend, React + Tailwind CSS in the frontend, PostgreSQL for the database and Drizzel as ORM. User accounts are created and procted using Clerk. Zod is used for state management, form validation, and data fetching. Entire application is typed using TypeScript. The application features a course management system, where admins can create courses, sections, add lessons, and manage their progress. Purchases are handled using Stripe, and users can view their purchase history.",
+    link: "https://github.com/Smit681/LMS",
+    quote:
+      "A LMS where users can purchase coursees, learn courses with progress tracking and admins manage products",
+    stats: [
+      { value: "NextJS PostGreSQL, Drizzel" },
+      { value: "React, Tailwind" },
+      { value: "Clerk, Zod, Stripe" },
+    ],
+  },
+  {
+    image: "/assets/foodhub.jpg",
     name: "Little India",
     desc: "Created using Express in the backend, CSS/Bootstrap/Handlebars/jQuery in the frontend and MongoDB for the database, following MVC software design. User can create a cart of dishes and place an order. Administrators can add/update/remove data from the database. SendGrid is used for sending email upon signup and order. User passwords are encrypted using bcryptjs. Hosted on Heroku.",
     link: "https://little-india.onrender.com/",
@@ -130,7 +143,7 @@ const data = [
     ],
   },
   {
-    image: "./assets/tax.jpg",
+    image: "/assets/tax.jpg",
     name: "Tax calculator",
     desc: "GUI Application to calculate federal and provincial tax deduction on income based on 2022 and 2021 Canada rates. Created using Java and JavaFX.",
     link: "https://github.com/Smit681/Tax-Calculator",
@@ -143,7 +156,7 @@ const data = [
     ],
   },
   {
-    image: "./assets/inventory.jpg",
+    image: "/assets/inventory.jpg",
     name: "Inventory Management",
     desc: "C++ project created using Object-Oriented programming that processes customer orders at any number of stations and keep inventory track by generating daily report. Implements classes, templets, inheritance, polymorphism, threads, algorithm and creates time-efficient program.",
     link: "https://github.com/Smit681/Customer-Order-and-Inventory-management",

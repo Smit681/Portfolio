@@ -2,28 +2,12 @@ import "./navbar.css";
 
 function Navbar() {
   return (
-    <header className="navbar flex items-center bg-white shadow z-30 h-20 p-5 fixed top-0 left-0 w-full">
-      <a href="/" className="flex items-center">
-        <img src="/assets/logo.jpg" alt="logo" className="w-16 sm:w-18 mr-3" />
-        <div>
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-wider">
-            SMIT SHAH
-          </h1>
-          <p className="text-gray-600 text-center tracking-wider">
-            WEB DEVELOPER
-          </p>
-        </div>
-      </a>
-      <div className="ml-auto text-xl gap-5 hidden sm:flex mr-10">
-        <a href="#home" className="hover:transform hover:scale-110">
-          Home
-        </a>
-        <a href="#project" className="hover:transform hover:scale-110">
-          Project
-        </a>
-        <a href="#about" className="hover:transform hover:scale-110">
-          About
-        </a>
+    <header className="flex z-30 items-center justify-between h-10 fixed top-0 left-0 w-full px-10 sm:px-20 md:px-30 py-5 text-xs md:text-sm lg:text-md xl:text-xl ">
+      <a href="#home">Smit Shah</a>
+      <div className="display flex gap-2 md:gap-5 text-xs md:text-sm lg:text-md xl:text-xl">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
       </div>
     </header>
   );

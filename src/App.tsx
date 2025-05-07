@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
 import ContactMe from "./components/ContactMe/ContactMe";
+import Work from "./components/Work/Work";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,13 +22,14 @@ function App() {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-        <div className="App h-screen overflow-y-scroll snap-y snap-mandatory">
+        <>
           <Navbar />
           <ContactMe />
           <Home />
           <Projects />
           <About />
-        </div>
+          <Work />
+        </>
       )}
     </>
   );
