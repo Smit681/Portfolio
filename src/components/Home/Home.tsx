@@ -6,7 +6,7 @@ function Home() {
       id="home"
       className="sm:snap-start h-[100vh] p-5 md:p-10 lg:p-15 flex flex-col md:flex-row items-center md:items-start justify-between"
     >
-      <div className="w-full md:w-[65%] md:mt-auto md:mb-10 xl:mb-50 mt-55 lg:px-15 relative md:static -top-65 md:text-shadow-none">
+      <div className="w-full my-60  md:my-auto md:w-[65%] lg:px-15 relative md:static -top-65 md:text-shadow-none">
         <h1 className="text-xl sm:text-2xl lg:text-3xl tracking-wide opacity-50 mt-20">
           Hello! I'm Smit
         </h1>
