@@ -1,6 +1,6 @@
 import { Mail, X } from "lucide-react";
 import { useState } from "react";
-import { FaGoogle, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaArrowUp, FaGoogle, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function ContactMe() {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,6 +28,9 @@ export default function ContactMe() {
 
   return (
     <div className={`fixed z-50 `}>
+      <a href="#home">
+        <FaArrowUp className=" text-white bg-black fixed bottom-13 sm:bottom-17 left-3 rounded-full size-9 sm:size-12 p-2" />
+      </a>
       <div
         className={`flex size-9 sm:size-12 text-white bg-black fixed bottom-3 left-3 p-1.5 sm:p-3 rounded-full hover:cursor-pointer hover:w-35 transition-all duration-300 items-center justify-center gap-3 ${
           isVisible ? "hidden" : "flex"
@@ -48,9 +51,9 @@ export default function ContactMe() {
 
       {isVisible && (
         <div
-          className={`bg-black fixed grid grid-cols-1 md:grid-cols-2 overflow-y-auto md:overflow-y-hidden
-
- ${animateHide ? "remove-Annimation" : "contactCard"}`}
+          className={`bg-black fixed grid grid-cols-1 md:grid-cols-2 overflow-y-auto md:overflow-y-hidden ${
+            animateHide ? "remove-Annimation" : "contactCard"
+          }`}
         >
           {showContent && <MessageContent hideDiv={hideDiv} />}
         </div>

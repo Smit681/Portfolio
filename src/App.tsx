@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
-import ContactMe from "./components/ContactMe";
 import Work from "./components/Work";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,11 +24,11 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <ContactMe />
           <Home />
           <About />
           <Projects />
           <Work />
+          <Footer />
         </>
       )}
     </>
