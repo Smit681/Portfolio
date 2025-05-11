@@ -41,7 +41,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex gap-5 mx-auto">
+        <div className="hidden md:flex gap-10 mx-auto">
           <a
             className="hover:cursor-pointer hover:scale-105 transition-all duration-75"
             onClick={() =>

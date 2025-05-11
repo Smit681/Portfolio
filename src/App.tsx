@@ -9,17 +9,58 @@ import Work from "./components/Work";
 import Footer from "./components/Footer";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // 1.5 seconds delay
+  const [loadingComplete, setLoadingComplete] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
 
-    return () => clearTimeout(timer);
-  });
+  useEffect(() => {
+    const waitForImages = () => {
+      const images = Array.from(document.images);
+      const bgImages = Array.from(document.querySelectorAll("[style]"))
+        .map((el) => {
+          const match = (el as HTMLElement).style.backgroundImage.match(
+            /url\(["']?([^"')]+)["']?\)/
+          );
+          return match ? match[1] : null;
+        })
+        .filter(Boolean) as string[];
+
+      const imagePromises = [
+        ...images.map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise<void>((resolve) => {
+            img.onload = () => resolve();
+            img.onerror = () => resolve(); // Still resolve even on error
+          });
+        }),
+        ...bgImages.map(
+          (src) =>
+            new Promise<void>((resolve) => {
+              const img = new Image();
+              img.src = src;
+              img.onload = () => resolve();
+              img.onerror = () => resolve();
+            })
+        ),
+      ];
+
+      Promise.all(imagePromises).then(() => {
+        setLoadingComplete(true);
+      });
+    };
+
+    waitForImages();
+  }, []);
+
+  useEffect(() => {
+    if (loadingComplete) {
+      const timeout = setTimeout(() => setShowWelcome(false), 2000); // 1.5s delay
+      return () => clearTimeout(timeout);
+    }
+  }, [loadingComplete]);
+
   return (
     <>
-      {isLoading ? (
+      {showWelcome ? (
         <LoadingScreen />
       ) : (
         <>

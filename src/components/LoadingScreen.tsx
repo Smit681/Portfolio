@@ -4,7 +4,7 @@ const LoadingScreen = () => {
     if (loader) {
       loader.classList.add("shutter");
     }
-  }, 1000);
+  }, 1500);
   return (
     <div className="animate-fadeIn fixed inset-0 bg-white flex items-center justify-center z-50">
       <img
