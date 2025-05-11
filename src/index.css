@@ -5,18 +5,10 @@
 @font-face {
     font-family: 'NewYork';
     src: url('/fonts/NewYork.otf') format('opentype');
+    font-weight:bolder;
   }
 
-  .robotoFont{
-    font-family: "Roboto Slab", sans-serif;
-}
+  
 
-.kanitFont{
-    font-family: "Kanit", sans-serif;
-}
-
-.newYorkFont{
-    font-family: "NewYork", sans-serif;
-}
 
 

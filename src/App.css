@@ -1,5 +1,217 @@
-body{
+/* body {
     background-image: url('/assets/white-waves.webp');
+    font-family: "Kanit", sans-serif;
+} */
+
+header {
+    /* background-image: url("/assets/white-waves.webp"); */
     font-family: "Kanit", sans-serif;
 }
 
+.robotoFont{
+    font-family: "Roboto Slab", sans-serif;
+}
+
+
+.kanitFont{
+    font-family: "Kanit", sans-serif;
+}
+
+.newYorkFont {
+    font-family: "NewYork";
+    font-weight: bolder;
+}
+
+.simulated-bold {
+  text-shadow: 0 0 1px white;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.contactCard {
+    animation: go-center 2s forwards;
+    transform: rotateY(2.5turn);
+}
+
+
+
+.remove-Annimation {
+    animation: go-back forwards 2s;
+    backface-visibility: visible;
+    transform: rotateY(2.5turn);
+}
+
+.spin-slow {
+    animation: spin 20s linear infinite;
+}
+
+.spin-fast {
+    animation: spin 10s linear infinite;
+}
+
+.animate-fadeIn {
+    animation: fade-in 0.8s ease-in;
+}
+
+.backgroundImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.shutter {
+    animation: shutter-up ease-out 0.4s forwards
+}
+
+.lds-ripple {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+}
+
+.lds-ripple div {
+    position: fixed;
+    border: 4px solid #fdd;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+@keyframes go-back {
+    0% {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        height: 70%;
+        width: 80%;
+        border-radius: 1rem;
+    }
+
+    100% {
+        height: 35px;
+        width: 35px;
+        left: 10px;
+        bottom: 10px;
+        border-radius: 50%;
+        display: none;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes go-center {
+    0% {
+        height: 48px;
+        width: 48px;
+        left: 20px;
+        bottom: 20px;
+        border-radius: 50%;
+    }
+
+    100% {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        height: 70%;
+        width: 80%;
+        border-radius: 1rem;
+    }
+}
+
+@keyframes shutter-up {
+    0% {
+        width: 100vw;
+    }
+
+    50% {
+        width: 100vw;
+    }
+
+    100% {
+        height: 0vh;
+        width: 100vw;
+    }
+
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
